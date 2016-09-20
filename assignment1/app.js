@@ -11,10 +11,13 @@
       var itemsCount = countItems($scope.lunchMenu)
       if(0 < itemsCount && itemsCount <= 3) {
         $scope.message = 'Enjoy!';
+        $scope.msgType = 'success';
       } else if (itemsCount > 3) {
         $scope.message = 'Too much!';
+        $scope.msgType = 'success';
       } else {
         $scope.message = 'Please enter data first';
+        $scope.msgType = 'danger';
       }
     };
   };
