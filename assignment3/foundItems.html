@@ -1,0 +1,32 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Short Name</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price Small</th>
+      <th>Small Portion Name</th>
+      <th>Price Large</th>
+      <th>Large Portion Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="item in foundItems">
+      <th scope="row">{{ $index }}</th>
+      <td>{{ item.short_name }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.description }}</td>
+      <td>{{ item.price_small }}</td>
+      <td>{{ item.small_portion_name }}</td>
+      <td>{{ item.price_large }}</td>
+      <td>{{ item.large_portion_name }}</td>
+      <td><button type="button"
+        name="remove"
+        ng-click="onRemove({index: $index});">Don't want this one!</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="alert alert-info" ng-show="foundItems.length == 0">Nothing found</div>
