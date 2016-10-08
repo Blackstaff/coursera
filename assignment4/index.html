@@ -8,7 +8,27 @@
   </head>
 <body>
 
-  <script src="angular.min.js" charset="utf-8"></script>
-  <script src="menuapp.module.js" charset="utf-8"></script>
+  <button type="button" ui-sref="home">Home</button>
+  <button type="button" ui-sref="categories">Categories</button>
+
+  <ui-view></ui-view>
+
+  <!-- Libraries -->
+  <script src="lib/angular.min.js" charset="utf-8"></script>
+  <script src="lib/angular-ui-router.min.js" charset="utf-8"></script>
+
+  <!-- Modules -->
+  <script src="app/menuapp/menuapp.module.js" charset="utf-8"></script>
+  <script src="app/data/data.module.js" charset="utf-8"></script>
+
+  <!-- Routes -->
+  <script src="app/routes.js" charset="utf-8"></script>
+
+  <!-- Components, etc. -->
+  <script src="app/menuapp/categories.component.js" charset="utf-8"></script>
+  <script src="app/menuapp/items.component.js" charset="utf-8"></script>
+
+  <script src="app/data/data.constants.js" charset="utf-8"></script>
+  <script src="app/data/menudata.service.js" charset="utf-8"></script>
 </body>
 </html>
