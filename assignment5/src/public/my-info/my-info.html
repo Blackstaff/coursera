@@ -5,8 +5,12 @@
     <div>Email: {{myInfoCtrl.userInfo.email}}</div>
     <div>Phone number: {{myInfoCtrl.userInfo.phone}}</div>
     <div>
-      <div>Favourite dish: {{myInfoCtrl.userInfo.favouriteDish}}</div>
-      <img ng-src="{{myInfoCtrl.ApiPath}}/images/{{myInfoCtrl.userInfo.favouriteDish}}"/>
+      <div>Favourite dish:</div>
+      <ul>
+        <li>Name: {{myInfoCtrl.userInfo.favouriteDish.name}}</li>
+        <li>Description: {{myInfoCtrl.userInfo.favouriteDish.description}}</li>
+      </ul>
+      <img ng-src="{{myInfoCtrl.ApiPath}}/images/{{myInfoCtrl.userInfo.favouriteDish.shortName}}"/>
     </div>
   </div>
   <div ng-hide="myInfoCtrl.isRegistered()">
